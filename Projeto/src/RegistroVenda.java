@@ -51,9 +51,10 @@ public class RegistroVenda {
         reg1.registroVendas(chinelo);
         reg1.registroVendas(jaqueta);
 
+        System.out.println("-------------------- Produtos --------------------");
         // Imprime na tela o vetor de vendas com todas as informações
         for (Venda func : reg1.getRegistroVendas()) {
-            System.out.println(" A venda " + func.getCodigo() + ", valor R$" + func.getValor() + " foi vendida na data "
+            System.out.println(" A venda " + func.getCodigo() + ", valor R$" + func.getValor() + " foi vendida na data: "
                     + func.getData());
         }
 
@@ -67,8 +68,10 @@ public class RegistroVenda {
 		frmt.setMaximumFractionDigits(2);
         
         // Imprime na tela os valores das funções
-        System.out.println("O total de vendas é " + totalVenda + " a maior venda é de R$" + maiorVenda
-                + " o valor médio das vendas é de R$" + frmt.format(mediaVenda));
+        System.out.println("-------------------- Dados --------------------");
+
+        System.out.println(" O total de vendas é R$" + totalVenda + "\n A maior venda é de R$" + maiorVenda
+                + "\n O valor médio das vendas é de R$" + frmt.format(mediaVenda));
     }
 
     // Insere uma venda no registro de vendas
